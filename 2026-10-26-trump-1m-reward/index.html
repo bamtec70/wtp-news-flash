@@ -35,17 +35,58 @@ button{border-color:#ff3030;color:#ff3030}
 .ticker span{display:inline-block;padding-left:100%;animation:crawl 22s linear infinite}
 @keyframes crawl{to{transform:translateX(-100%)}}
 footer{background:#000;text-align:center;padding:10px;font-size:13px;color:#8a9;letter-spacing:.2em;position:relative;z-index:10}
+body:before,body:after{content:none}
+.flash{position:relative;min-height:100vh;display:flex;flex-direction:column}
+.flash:before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.35) 0 2px,transparent 2px 4px);z-index:5}
+.flash:after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 160px 40px #000;z-index:6}
+html{scroll-behavior:smooth}
+.story{position:relative;z-index:10;max-width:760px;margin:40px auto;padding:32px 30px;background:#151a22;color:#e6e9ee;border-radius:12px;font:18px/1.7 Georgia,"Times New Roman",serif;text-align:left}
+.story h2{font:800 clamp(24px,4vw,34px)/1.25 Arial,Helvetica,sans-serif;color:#fff;margin:0 0 18px}
+.story h3{font:700 21px/1.3 Arial,Helvetica,sans-serif;color:#ffe600;margin:28px 0 10px}
+.story p,.story ul{margin:0 0 16px}.story ul{padding-left:22px}.story li{margin-bottom:8px}
+.story a{color:#7dd3fc}.story .kicker{font:700 13px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#ff6b6b}
+.story .end{font-weight:700;font-style:italic;margin-top:24px}
 </style></head><body>
+<div class="flash">
 <div class="banner">BREAKING NEWS</div>
 <div class="sub">★ NEWS FLASH ★ WE THE PEOPLE PRESS ★</div>
 <main>
 <div class="clock" id="clock"></div>
 <h1 id="hl"><span id="tx"></span><span class="cur">█</span></h1>
-<div class="btns"><button id="play">▶ Play alert</button>
+<div class="btns"><a class="btn" href="#story">Read full story</a>
+<button id="play">▶ Play alert</button>
 <a class="btn" href="2026-10-26-trump-1m-reward.mp4">Watch video</a>
 <a class="btn" href="https://wethepeoplepress.com/">More at We The People Press</a></div>
 </main>
 <div class="ticker"><span>BULLETIN ★ Trump Offers $1 Million for Voter Fraud Tips That Lead to Convictions ★ More news at wethepeoplepress.com ★ Stay tuned for updates ★</span></div>
+</div>
+<section id="story" class="story">
+<p class="kicker">Washington, D.C. · Oct. 26, 2026</p>
+<h2>Trump Offers $1 Million for Voter Fraud Tips That Lead to Convictions</h2>
+<p>President Donald Trump said Monday that anyone who reports voter fraud in past elections or the upcoming 2026 midterms will be paid $1,000,000 upon the arrest and conviction of those responsible. He made the offer in a <a href="https://truthsocial.com/@realDonaldTrump/117508870323063258" target="_blank" rel="noopener">Truth Social post</a> at 3:31 p.m. ET, and the official <a href="https://x.com/WhiteHouse/status/2114805509031416266" target="_blank" rel="noopener">White House account reposted it on X</a>.</p>
+<p>Speaking to reporters before leaving for a rally in Mississippi, Trump said he is "going to be issuing a million-dollar bonus or reward or whatever you want to call it" for such reports, according to the <a href="https://nypost.com/2026/10/26/us-news/trump-offers-1m-for-voter-fraud-reports-8-days-before-midterms/" target="_blank" rel="noopener">New York Post</a> and a <a href="https://x.com/RapidResponse47/status/2114805779761177007" target="_blank" rel="noopener">Rapid Response 47 clip</a>. The offer comes eight days before the midterm elections.</p>
+<h3>What is known and what is not</h3>
+<p><strong>Confirmed:</strong> The President posted the $1,000,000 offer on Truth Social on Oct. 26, 2026, and the White House reposted it. He repeated it to reporters before boarding Air Force One, per <a href="https://www.investing.com/news/politics-news/trump-offers-1-million-for-tipoffs-that-lead-to-voter-fraud-convictions-4973472" target="_blank" rel="noopener">Reuters</a>, <a href="https://abcnews.com/Politics/trump-offers-1m-reward-people-report-voter-fraud/story?id=137581908" target="_blank" rel="noopener">ABC News</a> and the New York Post.</p>
+<p><strong>Not yet confirmed:</strong> As of this report, no formal program, application process, funding source or reporting channel for the reward has been published by the White House or the Justice Department. ABC News reported it is not clear where the money would come from.</p>
+<p><strong>Claim, not finding:</strong> The President has repeatedly alleged fraud in past elections. Courts and election officials have not found fraud on a scale that changed the 2020 result.</p>
+<h3>How to report suspected voter fraud legally</h3>
+<ul>
+<li>Contact your county or state election office. Find yours through the <a href="https://www.eac.gov/voters/register-and-vote-in-your-state" target="_blank" rel="noopener">U.S. Election Assistance Commission directory</a>.</li>
+<li>Submit a tip to the FBI at <a href="https://tips.fbi.gov/" target="_blank" rel="noopener">tips.fbi.gov</a> or call 1-800-CALL-FBI. See the FBI's <a href="https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-scams-and-crimes/election-crimes-and-security" target="_blank" rel="noopener">election crimes page</a>.</li>
+<li>Report problems at a polling place to the poll workers or election judge on site. Do not interfere with voters, equipment or ballots.</li>
+<li>Stick to what you saw firsthand: date, time, location and what happened. Knowingly filing a false report is itself a crime.</li>
+</ul>
+<h3>Sources</h3>
+<ul class="src">
+<li><a href="https://truthsocial.com/@realDonaldTrump/117508870323063258" target="_blank" rel="noopener">President Trump on Truth Social (Oct. 26)</a></li>
+<li><a href="https://x.com/WhiteHouse/status/2114805509031416266" target="_blank" rel="noopener">The White House on X (Oct. 26)</a></li>
+<li><a href="https://x.com/RapidResponse47/status/2114805779761177007" target="_blank" rel="noopener">Rapid Response 47 on X (Oct. 26)</a></li>
+<li><a href="https://www.investing.com/news/politics-news/trump-offers-1-million-for-tipoffs-that-lead-to-voter-fraud-convictions-4973472" target="_blank" rel="noopener">Reuters via Investing.com (Oct. 26)</a></li>
+<li><a href="https://abcnews.com/Politics/trump-offers-1m-reward-people-report-voter-fraud/story?id=137581908" target="_blank" rel="noopener">ABC News (Oct. 26)</a></li>
+<li><a href="https://nypost.com/2026/10/26/us-news/trump-offers-1m-for-voter-fraud-reports-8-days-before-midterms/" target="_blank" rel="noopener">New York Post (Oct. 26)</a></li>
+</ul>
+<p class="end">You decide what to trust.</p>
+</section>
 <footer><a href="../" style="color:#8a9">ALL ALERTS</a> · OCT 26, 2026 · WE THE PEOPLE PRESS · FORT WORTH, TEXAS</footer>
 <script>
 const H="Trump Offers $1 Million for Voter Fraud Tips That Lead to Convictions";
